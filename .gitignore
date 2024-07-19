@@ -1,3 +1,4 @@
-./bin
-./bin/*
-./vscode
+bin
+bin/*
+vscode
+bin/kilo
