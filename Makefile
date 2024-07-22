@@ -1,2 +1,8 @@
+CFLAGS := -Wall -Wextra -pedantic -std=c99
+
 kilo: src/kilo.c
-	$(CC) src/kilo.c -o bin/kilo -Wall -Wextra -pedantic -std=c99
+	@echo "Compiling Kilo"
+	@$(CC) $(CFLAGS) $< -o bin/$@
+
+clean:
+	rm -f bin/*
