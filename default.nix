@@ -5,8 +5,13 @@ pkgs.stdenv.mkDerivation {
   version = "0.1.0";
   src = ./.;
 
+  buildPhase = ''
+    make clean
+    make install
+  '';
+
   installPhase = ''
     mkdir -p $out/bin
-    cp bin/kilo $out/bin/kilo
+    cp build/kilo $out/bin/kilo
   '';
 }
